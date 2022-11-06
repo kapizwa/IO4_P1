@@ -11,7 +11,7 @@
             
                 
             
-            
+                @can('isAdmin')
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fa-fw fas fa-gear nav-icon">
@@ -20,7 +20,7 @@
                         Zarządzanie kontami
                     </a>
                 </li>
-            
+                @endcan
             
                 <li class="nav-item">
                     <a href="#" class="nav-link">
