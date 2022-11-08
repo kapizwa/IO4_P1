@@ -23,7 +23,7 @@
                 @endcan
             
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/order_list" class="nav-link">
                         <i class="fa-fw fas fa-check nav-icon">
 
                         </i>
@@ -33,7 +33,7 @@
             
         
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/order_edit" class="nav-link">
                         <i class="fa-fw fas fa-edit nav-icon">
 
                         </i>
@@ -42,7 +42,7 @@
                 </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/users_list" class="nav-link">
                     <i class="fa-fw fas fa-user nav-icon">
 
                     </i>
@@ -50,11 +50,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/book_list" class="nav-link">
                     <i class="fa-fw fas fa-search nav-icon">
 
                     </i>
-                    Wyszukiwanie książek
+                    Lista książek
                 </a>
             </li>
             

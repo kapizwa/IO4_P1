@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ZamowieniaController;
+use App\Http\Controllers\BookListController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,11 +26,14 @@ Auth::routes();
 Route::middleware(['auth'])->group(function() {
     Route::middleware(['can:isAdmin'])->group(function() {
         /* ADMIN */
-
+        Route::get('/order_edit', [App\Http\Controllers\ZamowieniaController::class, 'index_edit']);
 
 });
     /* ZALOGOWANI */
-
+    Route::get('/users_list', [App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/order_list', [App\Http\Controllers\ZamowieniaController::class, 'index_list']);
+    
+    Route::get('/book_list', [App\Http\Controllers\BookListController::class, 'index']);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
