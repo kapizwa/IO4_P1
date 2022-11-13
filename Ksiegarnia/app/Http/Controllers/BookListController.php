@@ -14,7 +14,8 @@ class BookListController extends Controller
      */
     public function index()
     {
-        return view('/book_list');
+        $books=Book::All();
+        return view('/book_list', compact('books'));
     }
 
     /**

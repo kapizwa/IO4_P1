@@ -1,23 +1,35 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Lista ksiazek</div>
+<div class="row">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tytuł</th>
+      <th scope="col">Cena</th>
+      <th scope="col">Ilość stron</th>
+      <th scope="col">Ilość sztuk</th>
+      <th scope="col">Wydawnictwo</th>
+      <th scope="col">Autor</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($books as $book)
+      <tr>
+        <th scope="row">{{$book->id}}</th>
+        <td>{{$book->tytul}}</td>
+        <td>{{$book->cena}}</td>
+        <td>{{$book->ilosc_stron}}</td>
+        <td>{{$book->ilosc_sztuk}}</td>
+        <td>{{$book->wydawnictwo_id}}</td>
+        <td>{{$book->autor_id}}</td>
+        <td>
+        
+        </td>
+      </tr>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    @endforeach
+    </tbody>
 @endsection
