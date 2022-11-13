@@ -23,8 +23,8 @@
         <td>{{$book->cena}}</td>
         <td>{{$book->ilosc_stron}}</td>
         <td>{{$book->ilosc_sztuk}}</td>
-        <td>{{$book->wydawnictwo_id}}</td>
-        <td>{{$book->autor_id}}</td>
+        <td>{{$book->wydawnictwo->nazwa}}</td>
+        <td>{{$book->autor->imie}} {{$book->autor->nazwisko}}</td>
         <td>
         
         </td>

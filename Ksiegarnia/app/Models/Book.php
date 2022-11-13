@@ -21,4 +21,12 @@ class Book extends Model
         'ilosc_sztuk' => 'string',
 
     ];
+
+    public function wydawnictwo(){
+        return $this->belongsTo(Wydawnictwo::class, 'wydawnictwo_id');
+    }
+
+    public function autor(){
+        return $this->belongsTo(Autor::class, 'autor_id');
+    }
 }
