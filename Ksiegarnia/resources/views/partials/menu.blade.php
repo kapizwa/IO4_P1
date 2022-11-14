@@ -40,7 +40,7 @@
                         Edycja zamówień
                     </a>
                 </li>
-            
+            @can('isAdmin')
             <li class="nav-item">
                 <a href="/users_list" class="nav-link">
                     <i class="fa-fw fas fa-user nav-icon">
@@ -49,6 +49,7 @@
                     Użytkownicy
                 </a>
             </li>
+            @endcan
             <li class="nav-item">
                 <a href="/book_list" class="nav-link">
                     <i class="fa-fw fas fa-search nav-icon">

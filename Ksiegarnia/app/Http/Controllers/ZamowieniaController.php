@@ -14,7 +14,8 @@ class ZamowieniaController extends Controller
      */
     public function index_list()
     {
-        return view('/order_list');
+        $orders=Zamowienia::All();
+        return view('/order_list', compact('orders'));
     }
 
     public function index_edit()

@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function() {
     Route::middleware(['can:isAdmin'])->group(function() {
         /* ADMIN */
         Route::get('/order_edit', [App\Http\Controllers\ZamowieniaController::class, 'index_edit']);
+        Route::get('/user_show', [App\Http\Controllers\UserController::class, 'show']);
 
 });
     /* ZALOGOWANI */

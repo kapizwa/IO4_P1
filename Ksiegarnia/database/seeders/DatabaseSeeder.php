@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             autorTableseeder::class,
             usersTableseeder::class,
             bookTableseeder::class,
+            zamowieniaTableseeder::class,
         ]);
     }
 }

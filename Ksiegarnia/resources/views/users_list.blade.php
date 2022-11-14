@@ -8,6 +8,8 @@
       <th scope="col">Id</th>
       <th scope="col">Nazwa</th>
       <th scope="col">Email</th>
+      <th scope="col">Rola</th>
+      
       
     </tr>
   </thead>
@@ -17,9 +19,7 @@
         <th scope="row">{{$user->id}}</th>
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
-        <td>
-        
-        </td>
+        <td>{{$user->role}}</td>
       </tr>
 
     @endforeach
