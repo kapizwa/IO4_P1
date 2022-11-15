@@ -9,24 +9,28 @@ class Book extends Model
 {
     use HasFactory;
     protected $table = 'book';
+    public $timestamps = false;
     protected $fillable = [
-        'id', 'tytul','cena','ilosc_stron','ilosc_sztuk','wydawnictwo_id','autor_id',
+        'id', 
+        'tytul',
+        'cena',
+        'ilosc_stron',
+        'ilosc_sztuk',
+        'wydawnictwo',
+        'autor',
     ];
 
     protected $casts =
     [
         'tytul' => 'string',
         'cena' => 'string',
-        'ilosc_stron' => 'string',
-        'ilosc_sztuk' => 'string',
+        'ilosc_stron' => 'int',
+        'ilosc_sztuk' => 'int',
+        'wydawnictwo' => 'string',
+        'autor' => 'string',
+        
 
     ];
 
-    public function wydawnictwo(){
-        return $this->belongsTo(Wydawnictwo::class, 'wydawnictwo_id');
-    }
-
-    public function autor(){
-        return $this->belongsTo(Autor::class, 'autor_id');
-    }
+    
 }

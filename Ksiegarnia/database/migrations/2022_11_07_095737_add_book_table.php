@@ -17,10 +17,10 @@ return new class extends Migration
             $table->increments('id');
             $table->string('tytul');
             $table->string('cena');
-            $table->string('ilosc_stron');
-            $table->string('ilosc_sztuk');
-            $table->unsignedInteger('wydawnictwo_id');
-            $table->unsignedInteger('autor_id');
+            $table->unsignedInteger('ilosc_stron');
+            $table->unsignedInteger('ilosc_sztuk');
+            $table->string('wydawnictwo');
+            $table->string('autor')->nullable();
         });
     }
 

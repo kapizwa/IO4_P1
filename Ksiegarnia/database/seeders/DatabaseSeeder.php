@@ -15,8 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            wydawnictwoTableseeder::class,
-            autorTableseeder::class,
             usersTableseeder::class,
             bookTableseeder::class,
             zamowieniaTableseeder::class,

@@ -28,13 +28,20 @@ Route::middleware(['auth'])->group(function() {
         /* ADMIN */
         Route::get('/order_edit', [App\Http\Controllers\ZamowieniaController::class, 'index_edit']);
         Route::get('/user_show', [App\Http\Controllers\UserController::class, 'show']);
+       
+        
+
+        
 
 });
     /* ZALOGOWANI */
     Route::get('/users_list', [App\Http\Controllers\UserController::class, 'index']);
     Route::get('/order_list', [App\Http\Controllers\ZamowieniaController::class, 'index_list']);
     
+    //----Książka----// 
     Route::get('/book_list', [App\Http\Controllers\BookListController::class, 'index']);
+    Route::get('/book_list_create', [App\Http\Controllers\BookListController::class, 'create']);
+    Route::post('/book_list_create', [App\Http\Controllers\BookListController::class, 'store']);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
