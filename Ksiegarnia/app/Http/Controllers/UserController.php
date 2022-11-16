@@ -15,8 +15,20 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::where('role','user')->get();
         return view('/users_list', compact('users'));
+    }
+
+    public function delete($id)
+    {
+    
+        $users = User::find($id);
+   
+
+        DB::connection('mysql')->delete(DB::raw('DELETE FROM users WHERE id='.$id.';'));
+        
+        return redirect('users_list');
+
     }
 
     /**

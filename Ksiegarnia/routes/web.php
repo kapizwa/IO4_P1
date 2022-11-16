@@ -28,7 +28,8 @@ Route::middleware(['auth'])->group(function() {
         /* ADMIN */
         Route::get('/order_edit', [App\Http\Controllers\ZamowieniaController::class, 'index_edit']);
         Route::get('/user_show', [App\Http\Controllers\UserController::class, 'show']);
-       
+        Route::get('deleteuser/{id}', [App\Http\Controllers\UserController::class, 'delete']);
+
         
 
         
