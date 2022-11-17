@@ -15,7 +15,7 @@ class Zamowienia extends Model
 
     protected $casts =
     [
-        'data' => 'date',
+        'data' => 'string',
         'adres_wysylki' => 'string',
     ];
 
