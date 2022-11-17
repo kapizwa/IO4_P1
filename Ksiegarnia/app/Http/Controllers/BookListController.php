@@ -40,6 +40,19 @@ class BookListController extends Controller
         return redirect('book_list');
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+
+        $books = DB::table('book')->where(function($query) use ($request){
+            $query->where('tytul', 'like', '%'.$request->search . "%");
+            $query->orwhere('autor', 'like', '%'.$request->search . "%");
+        })->get();
+        
+        return view('book_list',['books' => $books]);
+    }
+
+
     /**
      * Display the specified resource.
      *

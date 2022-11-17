@@ -2,13 +2,31 @@
 
 @section('content')
 @can('isAdmin')
-<div style="margin-bottom: 10px;" class="row">
-  <div class="col-lg-12">
+<div style="width: auto; height: 70px; display: flex;">
+  <div class="box" >
   <a class="btn btn-success" href="/book_list_create">
-  Dodaj książkę
-  </a>
+      Dodaj książkę
+    </a>
+  </div>
+  <div class="box" >
+    <!-- <div class="col-md-4"> -->
+      <form action="/searchbook" method="get">
+        <div class="input-group">
+          <input type="search" name="search" class="form-control">
+          <span class="input-group-prepend">
+            <button type="submit" class="btn btn-primary">Szukaj</button>
+          </span>
+        </div>
+      </form>
+    <!-- </div> -->
   </div>
 </div>
+<style>
+  .box {
+    height: 50px;
+    width: 50%;
+  }
+</style>
 @endcan
 <div class="row">
 <table class="table table-hover">
