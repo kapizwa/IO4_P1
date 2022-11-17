@@ -29,8 +29,9 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/order_edit', [App\Http\Controllers\ZamowieniaController::class, 'index_edit']);
         Route::get('/user_show', [App\Http\Controllers\UserController::class, 'show']);
         Route::get('deleteuser/{id}', [App\Http\Controllers\UserController::class, 'delete']);
-
-        
+        Route::get('/searchuser',[App\Http\Controllers\UserController::class, 'search']);
+        Route::get('/user_list_create', [App\Http\Controllers\UserController::class, 'create']);
+        Route::post('/user_list_create', [App\Http\Controllers\UserController::class, 'store']);
 
         
 
