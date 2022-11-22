@@ -11,7 +11,7 @@
             
                 
             
-                @can('isAdmin')
+                <!-- @can('isAdmin')
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                     <i class="fa-solid fas fa-shopping-cart nav-icon"></i>
@@ -20,7 +20,7 @@
                         Koszyk
                     </a>
                 </li>
-                @endcan
+                @endcan -->
             
                 <li class="nav-item">
                     <a href="/order_list" class="nav-link">
@@ -32,14 +32,14 @@
                 </li>
             
         
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="/order_edit" class="nav-link">
                         <i class="fa-fw fas fa-edit nav-icon">
 
                         </i>
                         Edycja zamówień
                     </a>
-                </li>
+                </li> -->
             @can('isAdmin')
             <li class="nav-item">
                 <a href="/users_list" class="nav-link">
